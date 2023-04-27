@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmed Magdy\\source\\repos\\asp.net_project\\asp.net_project.csproj",
+      "projectUniqueName": "C:\\Users\\Ahmed Magdy\\Documents\\GitHub\\ASP.NET-MVC-Project\\asp.net_project.csproj",
       "projectName": "asp.net_project",
-      "projectPath": "C:\\Users\\Ahmed Magdy\\source\\repos\\asp.net_project\\asp.net_project.csproj",
+      "projectPath": "C:\\Users\\Ahmed Magdy\\Documents\\GitHub\\ASP.NET-MVC-Project\\asp.net_project.csproj",
       "packagesPath": "C:\\Users\\Ahmed Magdy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmed Magdy\\source\\repos\\asp.net_project\\obj\\",
+      "outputPath": "C:\\Users\\Ahmed Magdy\\Documents\\GitHub\\ASP.NET-MVC-Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmed Magdy\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -15,10 +15,18 @@ namespace asp.net_project.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View("main");
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult login()
+        {
+            return View();
+        }
+        public IActionResult main()
         {
             return View();
         }
