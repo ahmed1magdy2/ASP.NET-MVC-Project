@@ -8,13 +8,12 @@ namespace asp.net_project.Data
         public mvcContext(DbContextOptions options) : base(options)
         {
         }
+        public DbSet<RegisterAccount> Account { get; set; }
         public DbSet<Ships> Ships { get; set; } 
         public DbSet<Berths> Berths { get; set; }
-        public DbSet<Cargo> Cargoes { get; set; }
+        public DbSet<Cargo> Cargo { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<Invoices> Invoices { get; set; }
-
-        
     }
 
 }
