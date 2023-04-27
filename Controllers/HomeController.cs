@@ -24,11 +24,11 @@ namespace asp.net_project.Controllers
         }
         public IActionResult login()
         {
-            return View();
+            return View("login");
         }
         public IActionResult main()
         {
-            return View();
+            return View("main");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
