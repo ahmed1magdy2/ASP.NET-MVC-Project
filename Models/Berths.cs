@@ -4,8 +4,10 @@
     public class Berths
     {
         public Guid Id { get; set; }
+        public  Guid PortId { get; set; }
         public string Name { get; set; }
         public double Length { get; set; }
         public double Width { get; set; }
+        public virtual Ports Port { get; set; }
     }
 }

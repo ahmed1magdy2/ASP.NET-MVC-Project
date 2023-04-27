@@ -6,10 +6,11 @@ namespace asp.net_project.Models
     {
         [Key]
         public Guid Id { get; set; }
-        public RegisterAccount Account { get; set; }
+        public Guid userId { get; set; }
         public Guid TransId { get; set; }
         public DateTime InvoiceDate { get; set; }
         public double Amount { get; set; }
+        public virtual RegisterAccount Account { get; set; }
         public virtual ICollection<Transactions> Transactions { get; set; }
     }
 }

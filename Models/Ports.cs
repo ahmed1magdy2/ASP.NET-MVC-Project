@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Location { get; set; }
         public double Capacity { get; set; }
-        public string Phone { get; set; }
+        public string Contact { get; set; }
         public string Email { get; set; }
     }
 }

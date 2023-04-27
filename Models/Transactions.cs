@@ -10,7 +10,6 @@ namespace asp.net_project.Models
         public Guid ShipId { get; set; }
         public Guid BerthId { get; set; }
         public Guid CargoId { get; set; }
-        public string Type { get; set; }
         public DateTime Date { get; set; }
         public virtual Ships Ship { get; set; }
         public virtual Berths Berth { get; set; }

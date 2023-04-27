@@ -10,8 +10,6 @@ namespace asp.net_project.Models
         public double Length { get; set; }
         public double Width { get; set; }
         public DateTime ArrivalDate{ get; set; }
-        public TimeOnly ArrivalTime { get; set; }
         public DateTime Departuredate { get; set; }
-        public TimeOnly DepartureTime { get; set; }
     }
 }
