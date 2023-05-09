@@ -15,7 +15,7 @@ namespace asp.net_project.Controllers
 
         public IActionResult Index()
         {
-            return View("main");
+            return View("login");
         }
 
         public IActionResult Privacy()
