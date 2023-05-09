@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\asp.net_project.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\wwwroot\\asd.jpeg",
+      "PackagePath": "staticwebassets\\asd.jpeg"
+    },
+    {
       "Id": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

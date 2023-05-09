@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gJV9fV/4l4eQy5wOUuKs1ULcAPw/JE9UL1lOIJNG2/c=",
+  "Hash": "yOPiQ4Odb3/TMPgJ4CftIC4yhXQbI5qo3eJF2rl9LYQ=",
   "Source": "asp.net_project",
   "BasePath": "_content/asp.net_project",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\asp.net_project.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\wwwroot\\asd.jpeg",
+      "SourceId": "asp.net_project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\wwwroot\\",
+      "BasePath": "_content/asp.net_project",
+      "RelativePath": "asd.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\asd.jpeg"
     },
     {
       "Identity": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\wwwroot\\css\\site.css",
