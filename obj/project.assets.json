@@ -3505,6 +3505,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 7.0.5",
+      "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5"
     ]
@@ -3515,11 +3516,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\asp.net_project.csproj",
-      "projectName": "asp.net_project",
-      "projectPath": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\asp.net_project.csproj",
+      "projectUniqueName": "E:\\Hazzem\\College\\register\\Harbor\\Harbor\\Harbor.csproj",
+      "projectName": "Harbor",
+      "projectPath": "E:\\Hazzem\\College\\register\\Harbor\\Harbor\\Harbor.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dell\\OneDrive\\Documents\\GitHub\\ASP.NET-MVC-Project\\obj\\",
+      "outputPath": "E:\\Hazzem\\College\\register\\Harbor\\Harbor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3549,6 +3550,12 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.5, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.5, )"
           },

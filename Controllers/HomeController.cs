@@ -1,4 +1,4 @@
-﻿using asp.net_project.Models;
+﻿using Harbor.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,9 +15,12 @@ namespace asp.net_project.Controllers
 
         public IActionResult Index()
         {
-            return View("login");
+            return View("main");
         }
-
+        public IActionResult About()
+        {
+            return View("about");
+        }
         public IActionResult Privacy()
         {
             return View();

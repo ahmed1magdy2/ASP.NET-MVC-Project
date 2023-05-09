@@ -1,4 +1,4 @@
-namespace asp.net_project.Models
+namespace Harbor.Models
 {
     public class ErrorViewModel
     {
