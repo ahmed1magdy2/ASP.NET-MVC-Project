@@ -1,8 +1,10 @@
-﻿using Harbor.Models;
+﻿using Harbor.Data;
+using Harbor.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
-namespace asp.net_project.Controllers
+namespace Harbor.Controllers
 {
     public class HomeController : Controller
     {
@@ -12,7 +14,6 @@ namespace asp.net_project.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
             return View("main");
@@ -21,14 +22,24 @@ namespace asp.net_project.Controllers
         {
             return View("about");
         }
+        public IActionResult Request()
+        {
+            return View("Request");
+        }
+        public IActionResult Services()
+        {
+            return View("Services");
+        }
+        public IActionResult contact()
+        {
+            return View("contact");
+        }
         public IActionResult Privacy()
         {
             return View();
         }
-        public IActionResult login()
-        {
-            return View("login");
-        }
+
+        
         public IActionResult main()
         {
             return View("main");

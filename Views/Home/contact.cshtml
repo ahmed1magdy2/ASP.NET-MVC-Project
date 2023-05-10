@@ -16,7 +16,7 @@
             color: #1794c6;
             padding: 20px;
             text-align: center;
-            width:100%;
+            width: 100%;
         }
 
         h1 {
@@ -70,7 +70,7 @@
         }
 
         .navbar {
-            width:100%;
+            width: 100%;
             background-color: #2e2e2e;
             width: 100%;
             margin: auto;
@@ -90,29 +90,73 @@
             bottom: 0;
         }
     </style>
-</head>
+    </head>
 <body>
-    <div class="navbar">
-        <h1 style="color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif" class="kk">H Λ R B O R</h1>
-        <ul class="hh">
+     <div class="navbar">
+            <h1 style="color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif" class="hh">H Λ R B O R</h1>
+            <ul>
 
-            <li><a href="/Home/login">Login</a></li>
-            <li><a href="/Home/about">About</a></li>
-            <li><a href="/Home/contact">Contact Us</a></li>
-            <li><a href="/Home/Services">PORTS</a></li>
-        </ul>
-    </div>
+                <li><a href="/Home/login">Login</a></li>
+                <li><a href="/Home/about">About</a></li>
+                <li><a href="/Home/contact">contact us</a></li>
+                <li><a href="/Home/Services">ports</a></li>
+            </ul>
+        </div>
     <header>
-        <h1>About Us</h1>
+        <h1 class="hehe">Contact Us</h1>
     </header>
+    
     <div class="container">
-        <p> At [HARBOR], we are dedicated to providing top-notch services and solutions for the management of ports worldwide. We specialize in helping ports increase their efficiency and productivity through innovative technology, strategic planning, and expert advice.Our team consists of experienced professionals with a wealth of knowledge in the ports industry. We understand the unique challenges that ports face in today's ever-changing market and are committed to providing tailored solutions to meet our clients' needs.Our services include:</p>
-        <p>Port Planning and Design: We provide expert advice on the planning and design of new ports or the expansion of existing ones. Our team works closely with clients to ensure that their port design is optimized for efficiency and productivity.</p>
-        <p>Port Operations Management: We offer a range of services to help ports streamline their operations, including terminal management, cargo handling, and vessel scheduling, and categorizing the cargos and thier type and the berth time for each ship.</p>
-        <p>Port Technology Solutions: We specialize in implementing the latest technology solutions to enhance port operations and improve productivity. Our team has experience in implementing a variety of solutions, including terminal operating systems, automated container handling systems, and vessel traffic management systems.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <img src="" alt="">
     </div>
     <footer>
         <p>© 2023 Contact Us. All rights reserved.</p>
     </footer>
 </body>
 </html>
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+    main {
+        padding: 20px;
+    }
+
+    .hehe {
+        width: 100%;
+        text-align: center;
+        color: #1794c6;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+    input,
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+</style>

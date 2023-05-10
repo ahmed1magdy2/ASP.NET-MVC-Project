@@ -1,0 +1,68 @@
+﻿@model Request
+<h1>SHIPS </h1>
+<div class="all">
+<form method="post" class="mt-5" asp-action="Request" asp-controller="Request">
+    <div class="mb-3">
+        <label for="" class="form-label">Ship Name</label>
+        <input type="text" class="form-control" asp-for="ShipName">
+    </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Type</label>
+            <input type="text" class="form-control" asp-for="Type">
+        </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Length</label>
+        <input type="number" class="form-control" asp-for="Length">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Width</label>
+        <input type="number" class="form-control" asp-for="Width">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Coming from</label>
+        <input type="text" class="form-control" asp-for="Coming_from">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Arrival Date</label>
+        <input type="date" class="form-control" asp-for="ArrivalDate">
+    </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Departure Date</label>
+            <input type="date" class="form-control" asp-for="Departuredate">
+        </div>
+    <div class="mb-3">
+        <h1>PORT</h1>
+        <select class="custom-select mr-sm-2" id="Ports">
+            <option selected>Choose...</option>
+            @*<option value="1">Alexandria</option>
+            <option value="2">raas ghareb</option>
+                <option value="3">wadi feran</option>*@
+           @foreach (var item in ViewData["Ports"] as List<Ports>)
+           {
+               <option >@item.Name</option>
+           }
+            </select>
+    </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Cargo Type</label>
+            <input type="text" class="form-control" asp-for="CargoType">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"> Quantity</label>
+            <input type="number" class="form-control" asp-for="Quantity">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Destination</label>
+            <input type="text" class="form-control" asp-for="Destination">
+        </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<style>
+    all.mb-3{
+    width: 50%;
+    text-align:center;
+    margin:200px;
+    padding:200px;
+    }
+</style>
