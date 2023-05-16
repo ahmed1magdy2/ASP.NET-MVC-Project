@@ -1,7 +1,7 @@
 ﻿@model Request
-<h1>SHIPS </h1>
-<div class="all">
-<form method="post" class="mt-5" asp-action="Request" asp-controller="Request">
+<h1 style="margin:20px;">SHIPS </h1>
+<div class="all" style="width:700px;">
+<form method="post" class="mt-5" asp-action="Request" asp-controller="Request" style="margin-left:20px;">
     <div class="mb-3">
         <label for="" class="form-label">Ship Name</label>
         <input type="text" class="form-control" asp-for="ShipName">
@@ -30,16 +30,16 @@
             <label for="" class="form-label">Departure Date</label>
             <input type="date" class="form-control" asp-for="Departuredate">
         </div>
-    <div class="mb-3">
-        <h1>PORT</h1>
-        <select class="custom-select mr-sm-2" id="Ports">
+    <div class="mb-port">
+        <h1 style="margin-bottom:10px;">PORT</h1>
+        <select class="custom-select mr-sm-2" id="Ports" asp-for="portName">
             <option selected>Choose...</option>
             @*<option value="1">Alexandria</option>
             <option value="2">raas ghareb</option>
                 <option value="3">wadi feran</option>*@
            @foreach (var item in ViewData["Ports"] as List<Ports>)
            {
-               <option >@item.Name</option>
+               <option value="@item.Id">@item.Name</option>
            }
             </select>
     </div>
