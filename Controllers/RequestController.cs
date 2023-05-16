@@ -42,10 +42,14 @@ namespace Harbor.Controllers
                 transaction.Type = req.Type;
                 transaction.Date = DateTime.Today;
                 transaction.Amount = 0;
+                port = dbContext.Ports.FirstOrDefault(u => u.Name == req.portName);
+                ship.PortId = port.Id;
                 //port = dbContext.Ports.FirstOrDefault(u => u.Name == req.portName);
 
                 dbContext.Ships.Add(ship);
+                dbContext.SaveChanges();
                 dbContext.Cargoes.Add(cargo);
+                dbContext.SaveChanges();
                 dbContext.Transactions.Add(transaction);
 
                 dbContext.SaveChanges();
