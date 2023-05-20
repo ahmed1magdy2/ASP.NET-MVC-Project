@@ -61,7 +61,7 @@ namespace Harbor.Controllers
             {
                 mvcContext.Products.Add(product);
                 mvcContext.SaveChanges();
-                Response.WriteAsync("<script>alert('Success Add New Product');</script>");
+                Response.WriteAsync("<script>alert('Success Add New Product');window.location = 'Show';</script>");
             }
             catch (Exception ex)
             {
@@ -140,6 +140,7 @@ namespace Harbor.Controllers
             {
                 var Trans = new Transaction
                 {
+                    Id = Guid.NewGuid(),
                     UserId = UsID,
                     ProductId = item.ProductID,
                 };

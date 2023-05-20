@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Harbor.Models
 {
-    [PrimaryKey(nameof(UserId), nameof(ProductId))]
     public class Transaction
     {
+        [Key]
+        public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public Guid ProductId { get; set; }
         [ForeignKey("UserId ")]
