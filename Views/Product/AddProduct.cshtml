@@ -1,0 +1,42 @@
+﻿@model Harbor.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Product</title>
+</head>
+<body>
+
+    <form class="row-cols-1" asp-action="AddProduct" asp-controller="Product" method="post" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        <div class="col-md-6">
+            <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+        <div class="col-md-6">
+            <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+
+            <div class="col-md-6">
+                <label for="" class="form-label">Image</label>
+                    <input type="file" class="form-control" asp-for="Image" name="img_file">
+            </div>
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+    </form>
+    <a asp-controller="Product" asp-action="Show">Back to List</a>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

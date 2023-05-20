@@ -17,8 +17,8 @@ namespace Harbor.Models
         [Required(ErrorMessage = "must input password")]
         public string Password { get; set; }
 
-       
-        public virtual ICollection<Transactions> Transactions { get; set;}
 
+        public ICollection<Cart>? Carts { get; set; }
+        public ICollection<Transaction>? Transactions { get; set; }
     }
 }

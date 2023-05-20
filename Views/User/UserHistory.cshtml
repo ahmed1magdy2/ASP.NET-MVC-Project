@@ -1,0 +1,19 @@
+﻿@model List<Product>
+
+<h1> History</h1>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card box-shadow p-1">
+                    <div>Titel: @item.Name </div>
+                    <img width="200" height="250" src="/Img/@item.Image" />
+                    <ul class="list-group-item">
+                        <li class="list-group-item">Price: @item.Price</li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>

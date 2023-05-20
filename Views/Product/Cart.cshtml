@@ -1,0 +1,37 @@
+﻿@model List<CartItem>
+<h1>Product Selected</h1>
+<hr />
+@if (Model.Count < 1)
+{
+    <h3>Cart is Empty</h3>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th></th>
+        </thead>
+
+        <tbody>
+            @{
+                decimal total = 0;
+            }
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>@item.Product_Name</td>
+                    <td>@item.Product_Quantity</td>
+                    <td>@item.Product_Price</td>
+                    <td><a asp-controller="Product" asp-action="RemoveFromCart" asp-route-id="@item.ProductID" class="btn btn-primary">Remove from Cart</a></td>
+                </tr>
+                total += item.Product_Price;
+            }
+            <td>Total:  @total</td>
+        </tbody>
+    </table>
+    <a class="btn btn-success" asp-controller="Product" asp-action="Checkout">Checkout</a>
+}

@@ -16,20 +16,19 @@ namespace Harbor.Controllers
         }
         public IActionResult Index()
         {
-            return View("main");
+            var id = HttpContext.Session.GetString("ID");
+            if (String.IsNullOrEmpty(id))
+            {
+                return RedirectToAction("login", "User");
+            }
+            return View("Index");
         }
         public IActionResult About()
         {
             return View("about");
         }
-        public IActionResult Request()
-        {
-            return View("Request");
-        }
-        public IActionResult Services()
-        {
-            return View("Services");
-        }
+        
+        
         public IActionResult contact()
         {
             return View("contact");
@@ -40,10 +39,6 @@ namespace Harbor.Controllers
         }
 
         
-        public IActionResult main()
-        {
-            return View("main");
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

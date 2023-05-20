@@ -9,11 +9,10 @@ namespace Harbor.Data
         {
         }
         public DbSet<User> Users { get; set; }
-        public DbSet<Ships> Ships { get; set; }
-        public DbSet<Ports> Ports { get; set; }
-        public DbSet<Berths> Berths { get; set; }
-        public DbSet<Cargo> Cargoes { get; set; }
-        public DbSet<Transactions> Transactions { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+
+        
         
     }
 

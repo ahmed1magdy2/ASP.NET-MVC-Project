@@ -22,174 +22,87 @@ namespace Harbor.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Harbor.Models.Berths", b =>
+            modelBuilder.Entity("Harbor.Models.Cart", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Capacity")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("PortId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PortId");
-
-                    b.ToTable("Berths");
-                });
-
-            modelBuilder.Entity("Harbor.Models.Cargo", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("BerthsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Destination")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Quantity")
-                        .HasColumnType("float");
-
-                    b.Property<Guid>("ShipId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("TransactionsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BerthsId");
-
-                    b.HasIndex("ShipId");
-
-                    b.HasIndex("TransactionsId");
-
-                    b.ToTable("Cargoes");
-                });
-
-            modelBuilder.Entity("Harbor.Models.Ports", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Ports");
-                });
-
-            modelBuilder.Entity("Harbor.Models.Ships", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("ArrivalDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("BerthsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Coming_from")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Departuredate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Length")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("PortId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("TransactionsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Width")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BerthsId");
-
-                    b.HasIndex("PortId");
-
-                    b.HasIndex("TransactionsId");
-
-                    b.ToTable("Ships");
-                });
-
-            modelBuilder.Entity("Harbor.Models.Transactions", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<Guid>("BerthId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("PortId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("PortsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BerthId");
-
-                    b.HasIndex("PortsId");
-
                     b.HasIndex("UserId");
+
+                    b.ToTable("Cart");
+                });
+
+            modelBuilder.Entity("Harbor.Models.CartItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("CartId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Product_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Product_Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Product_Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.ToTable("CartItem");
+                });
+
+            modelBuilder.Entity("Harbor.Models.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Harbor.Models.Transaction", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("UserId", "ProductId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Transactions");
                 });
@@ -221,66 +134,31 @@ namespace Harbor.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Harbor.Models.Berths", b =>
+            modelBuilder.Entity("Harbor.Models.Cart", b =>
                 {
-                    b.HasOne("Harbor.Models.Ports", "Port")
-                        .WithMany("Berths")
-                        .HasForeignKey("PortId")
+                    b.HasOne("Harbor.Models.User", "User")
+                        .WithMany("Carts")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Port");
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Harbor.Models.Cargo", b =>
+            modelBuilder.Entity("Harbor.Models.CartItem", b =>
                 {
-                    b.HasOne("Harbor.Models.Berths", null)
-                        .WithMany("Cargo")
-                        .HasForeignKey("BerthsId");
-
-                    b.HasOne("Harbor.Models.Ships", "Ship")
-                        .WithMany()
-                        .HasForeignKey("ShipId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Harbor.Models.Transactions", null)
-                        .WithMany("Cargo")
-                        .HasForeignKey("TransactionsId");
-
-                    b.Navigation("Ship");
+                    b.HasOne("Harbor.Models.Cart", null)
+                        .WithMany("Items")
+                        .HasForeignKey("CartId");
                 });
 
-            modelBuilder.Entity("Harbor.Models.Ships", b =>
+            modelBuilder.Entity("Harbor.Models.Transaction", b =>
                 {
-                    b.HasOne("Harbor.Models.Berths", null)
-                        .WithMany("Ships")
-                        .HasForeignKey("BerthsId");
-
-                    b.HasOne("Harbor.Models.Ports", "Port")
-                        .WithMany()
-                        .HasForeignKey("PortId")
+                    b.HasOne("Harbor.Models.Product", "Product")
+                        .WithMany("Transactions")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Harbor.Models.Transactions", null)
-                        .WithMany("Ships")
-                        .HasForeignKey("TransactionsId");
-
-                    b.Navigation("Port");
-                });
-
-            modelBuilder.Entity("Harbor.Models.Transactions", b =>
-                {
-                    b.HasOne("Harbor.Models.Berths", "Berth")
-                        .WithMany()
-                        .HasForeignKey("BerthId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Harbor.Models.Ports", "Ports")
-                        .WithMany()
-                        .HasForeignKey("PortsId");
 
                     b.HasOne("Harbor.Models.User", "User")
                         .WithMany("Transactions")
@@ -288,34 +166,25 @@ namespace Harbor.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Berth");
-
-                    b.Navigation("Ports");
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Harbor.Models.Berths", b =>
+            modelBuilder.Entity("Harbor.Models.Cart", b =>
                 {
-                    b.Navigation("Cargo");
-
-                    b.Navigation("Ships");
+                    b.Navigation("Items");
                 });
 
-            modelBuilder.Entity("Harbor.Models.Ports", b =>
+            modelBuilder.Entity("Harbor.Models.Product", b =>
                 {
-                    b.Navigation("Berths");
-                });
-
-            modelBuilder.Entity("Harbor.Models.Transactions", b =>
-                {
-                    b.Navigation("Cargo");
-
-                    b.Navigation("Ships");
+                    b.Navigation("Transactions");
                 });
 
             modelBuilder.Entity("Harbor.Models.User", b =>
                 {
+                    b.Navigation("Carts");
+
                     b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618

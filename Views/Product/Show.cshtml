@@ -1,0 +1,27 @@
+﻿@model List<Product>
+<h1> Products Available</h1>
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <form method="post" asp-action="Show" asp-controller="Course">
+                <div class="col-md-4">
+                    <div class="card box-shadow p-1">
+                        <div>Titel: @item.Name </div>
+                        <img width="200" height="250" src="/Img/@item.Image" />
+                        <ul class="list-group-item">
+                            <li class="list-group-item">Available: @item.Quantity</li>
+                            <li class="list-group-item">Price: @item.Price</li>
+                            @{
+                                int num = 0;
+                            }
+                            <li class="list-group-item">Quantity <input type="number" name="num" asp-for="@num"></li>
+                            <li class="list-group-item"><button type="submit" asp-route-id="@item.Id" class="btn btn-primary">Add To Cart</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        }
+    </div>
+</div>
