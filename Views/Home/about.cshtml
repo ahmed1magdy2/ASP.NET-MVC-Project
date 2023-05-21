@@ -4,36 +4,49 @@
     <title>About Us</title>
     <style>
         body {
+        margin: 0;
+        color: rgba(190,190,190);
+        font: 600 16px/18px 'Open Sans',sans-serif;
+        background-image: linear-gradient(rgba(0,0,0,0.70),rgba(0,0,0,0.70)),url("https://c4.wallpaperflare.com/wallpaper/686/492/997/simple-simple-background-wallpaper-preview.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        header {
-            margin-top: 15px;
-            margin-bottom: -20px;
-            background-color: #ffffff;
-            color: #1794c6;
-            padding: 20px;
-            text-align: center;
-            width:100%;
+    .h1 
+    {
+         width: 120px;
+        cursor: pointer;}
+
+        .navbar {
+            width: 100%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+            .navbar ul {
+                font: 600 16px/18px 'Open Sans',sans-serif;
+                margin-right: 111px;
+            }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        p {
-            font-size: 24px;
-            line-height: 1.5;
-            margin-bottom: 20px;
+        .h1 {
+            width: 120px;
+            cursor: pointer;
         }
 
         .navbar ul li {
@@ -60,48 +73,50 @@
                 transition: 0.5s;
             }
 
-        .kk {
-            position: relative;
-            left: 20px;
-        }
-
-        .navbar ul li:hover::after {
-            width: 100%;
-        }
-
-        .navbar {
-            width:100%;
-            background-color: #2e2e2e;
-            width: 100%;
-            margin: auto;
-            padding: 35px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        footer {
-            background-color: #2e2e2e;
-            width: 98.7%;
-            color: #fff;
-            padding: 10px;
+            .navbar ul li:hover::after {
+                width: 100%;
+            }
+        header {
+            margin-top: 15px;
+            margin-bottom: -20px;
+            color: #1794c6;
+            padding: 20px;
             text-align: center;
-            position: relative;
-            bottom: 0;
+            width:100%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <h1 style="color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif" class="kk">H Λ R B O R</h1>
-        <ul class="hh">
+        <a href="/Home/Index"><h1 style="margin-left:111px;color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif">H Λ R B O R</h1></a>
+        <ul>
 
-            <li><a href="/User/login">Login</a></li>
+            <li><a href="/Product/Cart">Cart</a></li>
+            <li><a href="/User/UserHistory">User History</a></li>
+            <li><a href="/Home/contact">contactus</a></li>
             <li><a href="/Home/about">About</a></li>
-            <li><a href="/Home/contact">Contact Us</a></li>
-            <li><a href="/Home/Services">PORTS</a></li>
+            <li><a href="/User/Logout">Logout</a></li>
         </ul>
     </div>
+    <hr style="height:5px;" />
+
     <header>
         <h1>About Us</h1>
     </header>
@@ -111,8 +126,6 @@
         <p>Port Operations Management: We offer a range of services to help ports streamline their operations, including terminal management, cargo handling, and vessel scheduling, and categorizing the cargos and thier type and the berth time for each ship.</p>
         <p>Port Technology Solutions: We specialize in implementing the latest technology solutions to enhance port operations and improve productivity. Our team has experience in implementing a variety of solutions, including terminal operating systems, automated container handling systems, and vessel traffic management systems.</p>
     </div>
-    <footer>
-        <p>© 2023 Contact Us. All rights reserved.</p>
-    </footer>
+
 </body>
 </html>

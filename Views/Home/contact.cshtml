@@ -3,16 +3,9 @@
 <head>
     <title>About Us</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
         header {
             margin-top: 15px;
             margin-bottom: -20px;
-            background-color: #ffffff;
             color: #1794c6;
             padding: 20px;
             text-align: center;
@@ -25,6 +18,7 @@
         }
 
         .container {
+            font: 600 16px/18px 'Open Sans',sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -36,6 +30,25 @@
             margin-bottom: 20px;
         }
 
+        .navbar {
+            width: 100%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar ul
+        {
+                font: 600 16px/18px 'Open Sans',sans-serif;
+                margin-right:111px;
+        }
+
+        .h1 {
+            width: 120px;
+            cursor: pointer;
+        }
+
         .navbar ul li {
             list-style: none;
             display: inline-block;
@@ -43,71 +56,54 @@
             position: relative;
         }
 
-            .navbar ul li a {
+        .navbar ul li a {
                 text-decoration: none;
                 color: #fff;
                 text-transform: uppercase;
-            }
-
-            .navbar ul li::after {
-                content: '';
-                height: 3px;
-                width: 0;
-                background: #1794c6;
-                position: absolute;
-                left: 0;
-                bottom: 10px;
-                transition: 0.5s;
-            }
-
-        .kk {
-            position: relative;
-            left: 20px;
         }
 
-        .navbar ul li:hover::after {
-            width: 100%;
-        }
-
-        .navbar {
-        width: 100%;
-        background-color: #2e2e2e;
-        margin: auto;
-        padding: 35px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        }
-
-        footer {
-            background-color: #2e2e2e;
-            width:  100%;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: relative;
-            bottom: 0;
-        }
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1794c6;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }.navbar ul li:hover::after {
+            width: 100%;}
+            body {
+        margin: 0;
+    color: #6a6f8c;
+        background: #c8c8c8;
+        font: 600 16px/18px 'Open Sans',sans-serif;
+        background-image: linear-gradient(rgba(0,0,0,0.70),rgba(0,0,0,0.70)),url("https://c4.wallpaperflare.com/wallpaper/686/492/997/simple-simple-background-wallpaper-preview.jpg");
+        background-size: cover;
+        background-position: center;
+    }
     </style>
     </head>
 <body>
-     <div class="navbar">
-            <h1 style="color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif" class="hh">H Λ R B O R</h1>
-            <ul>
+    <div class="navbar">
+        <a href="/Home/Index"><h1 style="margin-left:111px;color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif">H Λ R B O R</h1></a>
+        <ul>
 
-                <li><a href="/User/login">Login</a></li>
-                <li><a href="/Home/about">About</a></li>
-                <li><a href="/Home/contact">contact us</a></li>
-                <li><a href="/Home/Services">ports</a></li>
-            </ul>
-        </div>
+            <li><a href="/Product/Cart">Cart</a></li>
+            <li><a href="/User/UserHistory">User History</a></li>
+            <li><a href="/Home/contact">contactus</a></li>
+            <li><a href="/Home/about">About</a></li>
+            <li><a href="User/Logout">Logout</a></li>
+        </ul>
+    </div>
+    <hr style="height:5px;" />
     <header>
         <h1 class="hehe">Contact Us</h1>
     </header>
     
     <div class="container">
-        <form>
-            <label for="name">Name:</label>
+        <form class="form">
+            <label  for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -117,13 +113,16 @@
         </form>
         <img src="" alt="">
     </div>
-    <footer>
-        <p>© 2023 Contact Us. All rights reserved.</p>
-    </footer>
+
 </body>
 </html>
 <style>
-
+    button{
+    border-radius:20px;
+    background-color:#2e2e2e;
+    color:#fff;
+    padding:10px;
+    }
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -136,16 +135,27 @@
         color: #1794c6;
     }
 
+    .form-control {
+        color: rgb(255, 255, 255);
+        font-family:Arial;
+    }
     form {
         display: flex;
         flex-direction: column;
-        max-width: 500px;
+        max-width: 550px;
         margin: 0 auto;
+
+        border-radius: 20px;
+        position: center;
+        position: relative;
+        transform-style: preserve-3d;
     }
 
     label {
         font-weight: bold;
         margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        font-family: 'Trebuchet MS';
     }
 
 

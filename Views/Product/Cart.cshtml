@@ -1,18 +1,103 @@
 ﻿@model List<CartItem>
-<h1>Product Selected</h1>
+<div class="navbar">
+    <a href="/Home/Index"><h1 style="margin-left:111px;color: rgb(255, 255, 255);font-family:Arial, Helvetica, sans-serif">H Λ R B O R</h1></a>
+    <ul>
+
+        <li><a href="/Product/Cart">Cart</a></li>
+        <li><a href="/User/UserHistory">User History</a></li>
+        <li><a href="/Home/contact">contactus</a></li>
+        <li><a href="/Home/about">About</a></li>
+        <li><a href="User/Logout">Logout</a></li>
+    </ul>
+   
+</div>
+<hr style="height:5px;" />
+<style>
+    body {
+        margin: 0;
+        color: #6a6f8c;
+        background: #c8c8c8;
+        font: 600 16px/18px 'Open Sans',sans-serif;
+        background-image: linear-gradient(rgba(0,0,0,0.70),rgba(0,0,0,0.70)),url("https://c4.wallpaperflare.com/wallpaper/686/492/997/simple-simple-background-wallpaper-preview.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .h1 {
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .navbar {
+        width: 100%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .navbar ul {
+            font: 600 16px/18px 'Open Sans',sans-serif;
+            margin-right: 111px;
+        }
+
+    .h1 {
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #1794c6;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        
+</style>
+<h1 style="margin:20px;margin-left:80px; color: rgb(255, 255, 255);font-family:Arial">Product Selected</h1>
 <hr />
 @if (Model.Count < 1)
 {
-    <h3>Cart is Empty</h3>
+    <h3 style="margin:20px;margin-left:80px; color: rgb(255, 255, 255);font-family:Arial">Cart is Empty</h3>
 }
 else
 {
     <table class="table">
         <thead>
-        <th>Name</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th></th>
+        <th style="color: rgb(255, 255, 255);font-family:Arial">Name</th>
+        <th style ="color: rgb(255, 255, 255);font-family:Arial">Quantity</th>
+        <th style="color: rgb(255, 255, 255);font-family:Arial">Price</th>
+        <th style="color: rgb(255, 255, 255);font-family:Arial"></th>
         </thead>
 
         <tbody>
@@ -23,15 +108,16 @@ else
             {
 
                 <tr>
-                    <td>@item.Product_Name</td>
-                    <td>@item.Product_Quantity</td>
-                    <td>@item.Product_Price</td>
-                    <td><a asp-controller="Product" asp-action="RemoveFromCart" asp-route-id="@item.ProductID" class="btn btn-primary">Remove from Cart</a></td>
+                    <td style="color: rgb(255, 255, 255);font-family:Arial">@item.Product_Name</td>
+                    <td style="color: rgb(255, 255, 255);font-family:Arial">@item.Product_Quantity</td>
+                    <td style="color: rgb(255, 255, 255);font-family:Arial">@item.Product_Price</td>
+                    <td style="color: rgb(255, 255, 255);font-family:Arial"><a asp-controller="Product" asp-action="RemoveFromCart" asp-route-id="@item.ProductID" class="btn btn-primary">Remove from Cart</a></td>
                 </tr>
                 total += item.Product_Price;
             }
-            <td>Total:  @total</td>
+            <td style ="color: rgb(255, 255, 255);font-family:Arial">Total:  @total</td>
         </tbody>
     </table>
     <a class="btn btn-success" asp-controller="Product" asp-action="Checkout">Checkout</a>
+   
 }
